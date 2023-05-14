@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "motoCoin_backend": {
+      "main": "src/motoCoin_backend/main.mo",
+      "type": "motoko"
+    },
+    "motoCoin_frontend": {
+      "dependencies": [
+        "motoCoin_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/motoCoin_frontend/src/index.html"
+      },
+      "source": [
+        "src/motoCoin_frontend/assets",
+        "dist/motoCoin_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
